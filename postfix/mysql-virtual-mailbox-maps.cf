@@ -1,0 +1,7 @@
+user = mailuser
+password = 
+hosts = 127.0.0.1
+dbname = mailserver
+table = mailbox
+select_field = maildir
+where_field = username

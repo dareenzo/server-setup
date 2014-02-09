@@ -1,0 +1,12 @@
+/^Received: from (.* \([-._[:alnum:]]+ \[[.[:digit:]]{7,15}\]\)).*?([[:space:]]+).*\(Authenticated sender: ([^)]+)\).*by (karma\.index\.co\.mz) \(([^)]+)\) with (E?SMTPS?A?) id ([A-F[:digit:]]+).*/
+  REPLACE Received: from [127.0.0.1] (localhost [127.0.0.1])$2(Authenticated sender: $3)${2}with $6 id $7
+/^From:.*163\.com/ DISCARD
+/^From:.*126\.com/ DISCARD
+/^Remote-MTA:.*qq\.com/ DISCARD
+/^Remote-MTA:.*139\.com/ DISCARD
+/^Received:/                 IGNORE
+/^User-Agent:/               IGNORE
+/^X-Mailer:/                 IGNORE
+/^X-Originating-IP:/         IGNORE
+/^x-cr-[a-z]*:/              IGNORE
+/^Thread-Index:/             IGNORE
